@@ -5,7 +5,7 @@ import datetime
 from telebot.types import InputFile, InlineKeyboardMarkup, InlineKeyboardButton
 import os
 
-bot = telebot.TeleBot('6884699618:AAGr-_Sz8xvmVVH4kTHiShP243WbVX3zfOQ')
+bot = telebot.TeleBot(token)
 Check_list = set()
 
 
@@ -67,7 +67,7 @@ def files(message):
 def hosting(message):
     markup = InlineKeyboardMarkup()
     markup.add(InlineKeyboardButton('PythonEverywhere',
-                                    url='https://www.pythonanywhere.com/user/AllChai/files/home/AllChai/obsi_bot%20'))
+                                    url=hosting_url))
     bot.send_message(message.chat.id, 'Хостинг: Pythoneverywhere', reply_markup=markup)
 
 
